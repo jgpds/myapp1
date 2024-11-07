@@ -4,8 +4,10 @@
 # It supports 3 stats forecasting models - Linear Regression, ARIMA, and Holt-Winters
 
 library(shiny)
+library(shinylive)
+library(httpuv)
 data(AirPassengers)
-
+#install.packages(c("shinylive", "httpuv"))
 # UI ----
 ui <- fluidPage(
 
@@ -234,4 +236,4 @@ mtext(side =2, text = format(at_y, scientific = FALSE), at = at_y,
 # Create Shiny app ----
 shinyApp(ui = ui, server = server)
 
-shinylive::export(appdir = "myapp", destdir = "docs")
+shinylive::export(appdir = "C:/Users/55819/Desktop/myapp/myapp1", destdir = "C:/Users/55819/Desktop/myapp/myapp1/docs")
